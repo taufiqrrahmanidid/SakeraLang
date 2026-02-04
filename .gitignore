@@ -1,0 +1,21 @@
+# Binaries
+sakera
+*.exe
+*.out
+
+# Go
+*.so
+*.dylib
+*.test
+*.prof
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db

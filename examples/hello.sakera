@@ -1,0 +1,9 @@
+sango nama = "Madura"
+toles nama
+
+sango angka = 10
+sango hasil = angka + 5
+toles hasil
+
+sango benar = bender
+toles benar

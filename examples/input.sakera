@@ -1,0 +1,5 @@
+
+toles "Masukkan nama Anda:"
+macah nama
+toles "Halo, "
+toles nama
