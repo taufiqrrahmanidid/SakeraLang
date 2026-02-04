@@ -78,22 +78,6 @@ toles hasil
 
 Lihat folder examples/ untuk contoh program lebih lengkap.
 
-## Roadmap
-
-- [x] Lexer dan Tokenizer
-
-- [x] Evaluator dasar
-
-- [ ] Parser lengkap
-
-- [ ] Conditional statements (mon/laen)
-
-- [ ] Loops (selama/ulang)
-
-- [ ] Functions (fungsi)
-
-- [ ] File execution
-
 ## Kontribusi
 
 Kontribusi sangat diterima! Silakan buat Pull Request atau buka Issue untuk diskusi.
