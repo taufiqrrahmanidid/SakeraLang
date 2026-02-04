@@ -1,21 +1,13 @@
 package evaluator
 
 import (
-
     "bufio"
-
     "fmt"
-
     "os"
-
     "strconv"
-
     "strings"
-
     
-
     "github.com/taufiqrrahmanidid/SakeraLang/pkg/lexer"
-
 )
 
 type Environment struct {
