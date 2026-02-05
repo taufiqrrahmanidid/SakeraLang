@@ -1,0 +1,12 @@
+// Test while loop
+sango i = 0
+
+toles "Hitung dari 0 sampai 5:"
+
+selama i < 5 {
+    toles i
+    sango i = i + 1
+}
+
+toles "Selesai!"
+toles i

@@ -1,0 +1,27 @@
+fungsi tambah(a, b) {
+    mareh a + b
+}
+
+fungsi kali(x, y) {
+    mareh x * y
+}
+
+sango hasil1 = tambah(5, 3)
+toles "5 + 3 ="
+toles hasil1
+
+sango hasil2 = kali(4, 7)
+toles "4 * 7 ="
+toles hasil2
+
+fungsi sapa(nama) {
+    toles "Halo, "
+    toles nama
+    toles "Selamat datang di SakeraLang!"
+}
+
+sapa("Taufiq")
+
+sango hasil3 = tambah(kali(2, 3), kali(4, 5))
+toles "2*3 + 4*5 ="
+toles hasil3

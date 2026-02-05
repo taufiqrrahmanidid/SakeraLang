@@ -4,6 +4,7 @@ import (
     "bufio"
     "fmt"
     "os"
+    "strings"
     
     "github.com/taufiqrrahmanidid/SakeraLang/pkg/evaluator"
 )
@@ -20,19 +21,31 @@ func main() {
 }
 
 func runFile(filename string) {
-    file, err := os.Open(filename)
+    content, err := os.ReadFile(filename)
     if err != nil {
         fmt.Printf("Error: tidak bisa membuka file '%s'\n", filename)
         return
     }
-    defer file.Close()
     
+    input := string(content)
     env := evaluator.NewEnvironment()
-    scanner := bufio.NewScanner(file)
     
-    for scanner.Scan() {
-        line := scanner.Text()
-        if line != "" {
+    // Cek apakah ada block statement atau function
+    if strings.Contains(input, "{") || strings.Contains(input, "fungsi") {
+        // Use advanced parser for block statements and functions
+        evaluator.EvalProgram(input, env)
+    } else {
+        // Use simple line-by-line evaluation
+        scanner := bufio.NewScanner(strings.NewReader(input))
+        for scanner.Scan() {
+            line := scanner.Text()
+            line = strings.TrimSpace(line)
+            
+            // Skip empty lines and comments
+            if line == "" || strings.HasPrefix(line, "//") {
+                continue
+            }
+            
             evaluator.Eval(line, env)
         }
     }

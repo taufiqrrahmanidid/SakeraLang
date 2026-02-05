@@ -1,0 +1,21 @@
+// Nested loops dan operasi kompleks
+toles "Tabel perkalian 5x5:"
+
+ulang sango i = 1; i < 6; sango i = i + 1 {
+    ulang sango j = 1; j < 6; sango j = j + 1 {
+        sango hasil = i * j
+        toles hasil
+    }
+    toles "---"
+}
+
+// While loop dengan counter
+toles "Hitung mundur:"
+sango countdown = 5
+
+selama countdown > 0 {
+    toles countdown
+    sango countdown = countdown - 1
+}
+
+toles "BOOM!"

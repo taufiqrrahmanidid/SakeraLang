@@ -1,0 +1,14 @@
+// Test for loop
+toles "For loop dari 0 sampai 5:"
+
+ulang sango i = 0; i < 5; sango i = i + 1 {
+    toles i
+}
+
+toles "For loop mundur dari 10 ke 5:"
+
+ulang sango j = 10; j > 5; sango j = j - 1 {
+    toles j
+}
+
+toles "Selesai!"

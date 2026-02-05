@@ -1,0 +1,6 @@
+fungsi sapa(nama) {
+    toles "Halo"
+    toles nama
+}
+
+sapa("Taufiq")

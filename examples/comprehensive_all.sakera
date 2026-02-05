@@ -1,0 +1,98 @@
+// ===================================
+// TEST COMPREHENSIVE SAKERALANG
+// ===================================
+
+toles "=== SakeraLang v0.1.0 ==="
+toles "Bahasa Pemrograman Madura"
+toles ""
+
+// 1. Variables
+toles "1. Test Variabel:"
+sango nama = "Taufiq"
+sango umur = 25
+sango aktif = bender
+toles nama
+toles umur
+toles aktif
+toles ""
+
+// 2. Operasi Matematika
+toles "2. Test Operasi Matematika:"
+sango a = 10
+sango b = 5
+toles a + b
+toles a - b
+toles a * b
+toles a / b
+toles ""
+
+// 3. Comparison
+toles "3. Test Perbandingan:"
+mon a > b {
+    toles "a lebih besar dari b"
+}
+mon a == b {
+    toles "a sama dengan b"
+}
+laen {
+    toles "a tidak sama dengan b"
+}
+toles ""
+
+// 4. While Loop
+toles "4. Test While Loop:"
+sango i = 0
+selama i < 3 {
+    toles i
+    sango i = i + 1
+}
+toles ""
+
+// 5. For Loop
+toles "5. Test For Loop:"
+ulang sango j = 0; j < 3; sango j = j + 1 {
+    toles j
+}
+toles ""
+
+// 6. Functions
+toles "6. Test Functions:"
+
+fungsi tambah(x, y) {
+    mareh x + y
+}
+
+fungsi kali(x, y) {
+    mareh x * y
+}
+
+sango hasil1 = tambah(5, 3)
+sango hasil2 = kali(4, 7)
+toles hasil1
+toles hasil2
+toles ""
+
+// 7. Nested Function Calls
+toles "7. Test Nested Function Calls:"
+sango hasil3 = tambah(kali(2, 3), kali(4, 5))
+toles hasil3
+toles ""
+
+// 8. Function dengan Conditional
+toles "8. Test Function dengan Conditional:"
+
+fungsi cekGanjilGenap(angka) {
+    sango sisa = angka - angka / 2 * 2
+    mon sisa == 0 {
+        mareh "Genap"
+    }
+    laen {
+        mareh "Ganjil"
+    }
+}
+
+toles cekGanjilGenap(4)
+toles cekGanjilGenap(7)
+toles ""
+
+toles "=== Test Selesai! ==="

@@ -1,0 +1,13 @@
+// Ini adalah komentar
+sango nama = "Madura"  // Variabel nama
+toles nama
+
+// Operasi matematika
+sango a = 10
+sango b = 5
+sango hasil = a + b  // Penjumlahan
+toles hasil
+
+// Boolean
+sango benar = bender  // True
+toles benar

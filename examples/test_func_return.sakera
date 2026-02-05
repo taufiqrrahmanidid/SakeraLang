@@ -1,0 +1,8 @@
+fungsi tambah(a, b) {
+    mareh a + b
+}
+
+sango x = tambah(5, 3)
+toles "x ="
+toles x
+

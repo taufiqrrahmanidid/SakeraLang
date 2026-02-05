@@ -1,0 +1,17 @@
+sango umur = 15
+
+mon umur > 17 {
+    toles "Anda sudah dewasa"
+}
+laen {
+    toles "Anda masih anak-anak"
+}
+
+sango nilai = 85
+
+mon nilai > 80 {
+    toles "Nilai Anda: A"
+}
+laen {
+    toles "Nilai Anda: B"
+}

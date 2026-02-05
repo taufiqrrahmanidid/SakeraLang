@@ -1,0 +1,11 @@
+sango umur = 20
+
+mon umur > 17 {
+    toles "Anda sudah dewasa"
+    sango status = "Dewasa"
+    toles status
+}
+
+mon umur < 17 {
+    toles "Anda masih anak-anak"
+}

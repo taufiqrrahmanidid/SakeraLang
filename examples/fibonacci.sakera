@@ -1,0 +1,17 @@
+// Fibonacci dengan rekursi
+fungsi fibonacci(n) {
+    mon n < 2 {
+        mareh n
+    }
+    laen {
+        sango a = fibonacci(n - 1)
+        sango b = fibonacci(n - 2)
+        mareh a + b
+    }
+}
+
+toles "Fibonacci 0-10:"
+ulang sango i = 0; i < 11; sango i = i + 1 {
+    sango hasil = fibonacci(i)
+    toles hasil
+}

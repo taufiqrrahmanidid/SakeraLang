@@ -27,6 +27,8 @@ func (l *Lexer) NextToken() Token {
     var tok Token
     
     l.skipWhitespace()
+    l.skipComment()
+    l.skipWhitespace()  
     
     switch l.ch {
     case '=':
@@ -99,11 +101,28 @@ func (l *Lexer) skipWhitespace() {
     }
 }
 
+func (l *Lexer) skipComment() {
+    if l.ch == '/' && l.peekChar() == '/' {
+        // Skip sampai akhir baris
+        for l.ch != '\n' && l.ch != 0 {
+            l.readChar()
+        }
+    }
+}
+
 func (l *Lexer) readIdentifier() string {
     position := l.position
-    for isLetter(l.ch) {
+    
+    // First character must be letter or underscore
+    if isLetter(l.ch) {
         l.readChar()
     }
+    
+    // Subsequent characters can be letters, digits, or underscores
+    for isLetter(l.ch) || isDigit(l.ch) {
+        l.readChar()
+    }
+    
     return l.input[position:l.position]
 }
 

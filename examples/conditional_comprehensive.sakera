@@ -1,0 +1,51 @@
+// Test conditional komprehensif
+toles "=== Test Conditional SakeraLang ==="
+
+sango a = 10
+sango b = 20
+
+mon a < b {
+    toles "a lebih kecil dari b"
+    sango hasil = b - a
+    toles hasil
+}
+
+mon a > b {
+    toles "a lebih besar dari b"
+}
+laen {
+    toles "a tidak lebih besar dari b"
+}
+
+sango umur = 25
+sango status = "belum ada"
+
+mon umur < 17 {
+    sango status = "Anak-anak"
+}
+laen {
+    mon umur < 30 {
+        sango status = "Remaja/Dewasa Muda"
+    }
+    laen {
+        sango status = "Dewasa"
+    }
+}
+
+toles "Status: "
+toles status
+
+// Test comparison
+sango x = 100
+sango y = 100
+
+mon x == y {
+    toles "x sama dengan y"
+}
+
+mon x != y {
+    toles "x tidak sama dengan y"
+}
+laen {
+    toles "x memang sama dengan y"
+}

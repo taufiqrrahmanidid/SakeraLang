@@ -1,0 +1,11 @@
+// Test input
+toles "Masukkan nama Anda:"
+macah nama
+toles "Halo, "
+toles nama
+
+toles "Masukkan umur Anda:"
+macah umur
+sango tahun_lahir = 2026 - umur
+toles "Anda lahir tahun:"
+toles tahun_lahir
