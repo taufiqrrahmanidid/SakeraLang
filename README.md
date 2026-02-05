@@ -1,5 +1,11 @@
 # SakeraLang 🌴
 
+<div align="center">
+  <img src="logo.png" alt="SakeraLang Logo" width="200"/>
+  <h1>SakeraLang 🌴</h1>
+  <p><strong>Bahasa Pemrograman Berbasis Bahasa Madura</strong></p>
+</div>
+
 [![GitHub release](https://img.shields.io/github/v/release/taufiqrrahmanidid/SakeraLang)](https://github.com/taufiqrrahmanidid/SakeraLang/releases)
 [![GitHub stars](https://img.shields.io/github/stars/taufiqrrahmanidid/SakeraLang?style=social)](https://github.com/taufiqrrahmanidid/SakeraLang/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/taufiqrrahmanidid/SakeraLang?style=social)](https://github.com/taufiqrrahmanidid/SakeraLang/network/members)
