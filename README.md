@@ -257,7 +257,7 @@ MIT License - Lihat file [LICENSE](LICENSE) untuk detail.
 
 Terinspirasi dari komunitas bahasa pemrograman lokal Indonesia:
 - [PrabogoLang](https://github.com/prabogo/prabogo)
-- [SundaLang](sundalang.emandev.xyz)
+- [SundaLang](https://sundalang.emandev.xyz/)
 - Dan komunitas open source Indonesia lainnya
 
 ---
