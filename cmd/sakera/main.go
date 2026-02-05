@@ -53,7 +53,7 @@ func runFile(filename string) {
 
 func runREPL() {
     fmt.Println("=================================")
-    fmt.Println("  Selamet Rabu e  SakeraLang v0.1.0")
+    fmt.Println("  Selamet Rabu e  SakeraLang v0.2.0")
     fmt.Println("  Bahasa Pemrograman Madura")
     fmt.Println("=================================")
     fmt.Println("Ketik 'keluar' untuk exit")
