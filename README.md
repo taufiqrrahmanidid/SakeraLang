@@ -1,5 +1,10 @@
 # SakeraLang 🌴
 
+[![GitHub release](https://img.shields.io/github/v/release/taufiqrrahmanidid/SakeraLang)](https://github.com/taufiqrrahmanidid/SakeraLang/releases)
+[![GitHub stars](https://img.shields.io/github/stars/taufiqrrahmanidid/SakeraLang?style=social)](https://github.com/taufiqrrahmanidid/SakeraLang/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/taufiqrrahmanidid/SakeraLang?style=social)](https://github.com/taufiqrrahmanidid/SakeraLang/network/members)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Go Version](https://img.shields.io/badge/Go-1.21+-00ADD8?logo=go)](https://go.dev/)
 ![SakeraLang](https://img.shields.io/badge/version-0.2.0-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Go](https://img.shields.io/badge/Go-1.21+-00ADD8?logo=go)
