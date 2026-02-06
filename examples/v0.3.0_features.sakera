@@ -1,0 +1,50 @@
+// Test fitur v0.3.0
+toles "=== Test Fitur Baru v0.3.0 ==="
+toles ""
+
+// 1. Modulo Operator
+toles "1. Test Modulo:"
+sango a = 10
+sango b = 3
+sango sisa = a - a / b * b
+toles sisa
+
+// 2. Logical Operators - DAN (AND)
+toles "2. Test DAN (AND):"
+sango x = 5
+sango y = 10
+
+mon x > 0 dan y > 0 {
+    toles "Keduanya positif"
+}
+
+// 3. Logical Operators - ATAU (OR)
+toles "3. Test ATAU (OR):"
+sango nilai = 75
+
+mon nilai < 60 atau nilai > 90 {
+    toles "Nilai ekstrem"
+}
+laen {
+    toles "Nilai normal"
+}
+
+// 4. Logical Operators - TIDAK (NOT)
+toles "4. Test TIDAK (NOT):"
+sango aktif = sala
+
+mon tidak aktif {
+    toles "Status: Nonaktif"
+}
+
+// 5. Kombinasi Logical Operators
+toles "5. Test Kombinasi:"
+sango umur = 25
+sango punya_sim = bender
+
+mon umur > 17 dan punya_sim {
+    toles "Boleh mengemudi"
+}
+
+toles ""
+toles "=== Test Selesai ==="

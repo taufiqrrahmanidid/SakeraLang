@@ -77,6 +77,8 @@ func (l *Lexer) NextToken() Token {
     case 0:
         tok.Literal = ""
         tok.Type = EOF
+    case '%':
+        tok = newToken(MODULO, l.ch)
     default:
         if isLetter(l.ch) {
             tok.Literal = l.readIdentifier()

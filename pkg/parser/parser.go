@@ -130,9 +130,21 @@ func (p *Parser) parseBlockStatement() *BlockStatement {
 func (p *Parser) parseExpression() Expression {
     var left Expression
     
+    // Handle TIDAK (NOT) prefix
+    if p.curToken.Type == lexer.TIDAK {
+        notToken := p.curToken
+        p.nextToken()
+        right := p.parseExpression()
+        return &InfixExpression{
+            Token:    notToken,
+            Left:     &Boolean{Token: notToken, Value: true}, // dummy left
+            Operator: "tidak",
+            Right:    right,
+        }
+    }
+    
     switch p.curToken.Type {
     case lexer.IDENT:
-        // Check if this is a function call
         if p.peekToken.Type == lexer.LPAREN {
             left = p.parseFunctionCall()
         } else {
@@ -151,11 +163,13 @@ func (p *Parser) parseExpression() Expression {
         return nil
     }
     
-    // Check for infix operators
+    // Check for infix operators (including DAN and ATAU)
     if p.peekToken.Type == lexer.PLUS || p.peekToken.Type == lexer.MINUS ||
         p.peekToken.Type == lexer.ASTERISK || p.peekToken.Type == lexer.SLASH ||
+        p.peekToken.Type == lexer.MODULO ||
         p.peekToken.Type == lexer.LT || p.peekToken.Type == lexer.GT ||
-        p.peekToken.Type == lexer.EQ || p.peekToken.Type == lexer.NOT_EQ {
+        p.peekToken.Type == lexer.EQ || p.peekToken.Type == lexer.NOT_EQ ||
+        p.peekToken.Type == lexer.DAN || p.peekToken.Type == lexer.ATAU {
         
         p.nextToken()
         operator := p.curToken.Literal

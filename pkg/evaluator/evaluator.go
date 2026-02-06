@@ -190,6 +190,29 @@ func evaluateExpression(tokens []lexer.Token, env *Environment) interface{} {
             return fmt.Sprintf("%v", left) != fmt.Sprintf("%v", right)
         }
     }
+    if len(tokens) >= 3 {
+	    for i := 0; i < len(tokens); i++ {
+		if tokens[i].Type == lexer.DAN || tokens[i].Type == lexer.ATAU {
+		    left := evaluateExpression(tokens[:i], env)
+		    operator := tokens[i]
+		    right := evaluateExpression(tokens[i+1:], env)
+		    
+		    leftBool := isTruthy(left)
+		    rightBool := isTruthy(right)
+		    
+		    if operator.Type == lexer.DAN {
+		        return leftBool && rightBool
+		    } else if operator.Type == lexer.ATAU {
+		        return leftBool || rightBool
+		    }
+		}
+	    }
+	}
+	// Handle TIDAK (NOT)
+	if len(tokens) > 0 && tokens[0].Type == lexer.TIDAK {
+	    value := evaluateExpression(tokens[1:], env)
+	    return !isTruthy(value)
+	}
     
     return tokens[0].Literal
 }
@@ -377,6 +400,17 @@ func evalExpression(expr parser.Expression, env *Environment) interface{} {
 }
 
 func evalInfixExpression(operator string, left, right interface{}) interface{} {
+    // Handle logical operators first
+    if operator == "dan" {
+        return isTruthy(left) && isTruthy(right)
+    }
+    if operator == "atau" {
+        return isTruthy(left) || isTruthy(right)
+    }
+    if operator == "tidak" {
+        return !isTruthy(right)
+    }
+    
     leftInt, leftIsInt := toInt(left)
     rightInt, rightIsInt := toInt(right)
     
@@ -391,6 +425,11 @@ func evalInfixExpression(operator string, left, right interface{}) interface{} {
         case "/":
             if rightInt != 0 {
                 return leftInt / rightInt
+            }
+            return 0
+        case "%":
+            if rightInt != 0 {
+                return leftInt % rightInt
             }
             return 0
         case "<":

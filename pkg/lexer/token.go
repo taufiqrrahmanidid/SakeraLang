@@ -47,6 +47,15 @@ const (
     SALA    = "SALA"    // false
     TOLES   = "TOLES"   // print
     MACAH   = "MACAH"   // read
+    DAFTAR  = "DAFTAR"  // array/list
+    DAN     = "DAN"     // and
+    ATAU    = "ATAU"    // or
+    TIDAK   = "TIDAK"   // not
+    MANDEK  = "MANDEK"  // break
+    LANJOT  = "LANJOT"  // continue
+    
+    // Operators v0.3.0
+    MODULO  = "%"       // modulo
 )
 
 var keywords = map[string]TokenType{
@@ -61,6 +70,12 @@ var keywords = map[string]TokenType{
     "sala":   SALA,
     "toles":  TOLES,
     "macah":  MACAH,
+    "daftar": DAFTAR,
+    "dan":    DAN,
+    "atau":   ATAU,
+    "tidak":  TIDAK,
+    "mandek": MANDEK,
+    "lanjot": LANJOT,
 }
 
 func LookupIdent(ident string) TokenType {

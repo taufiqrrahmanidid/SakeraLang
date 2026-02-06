@@ -1,0 +1,12 @@
+// Test modulo
+toles "Test Modulo:"
+
+sango a = 10
+sango b = 3
+sango hasil = a - a / b * b
+toles hasil
+
+sango x = 17
+sango y = 5
+sango sisa = x - x / y * y
+toles sisa

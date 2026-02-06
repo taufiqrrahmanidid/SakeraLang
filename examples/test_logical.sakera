@@ -1,0 +1,8 @@
+// Test logical operators - simple
+sango a = bender
+sango b = sala
+
+toles "Test simple boolean:"
+toles a
+toles b
+
