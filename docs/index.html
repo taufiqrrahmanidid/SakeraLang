@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SakeraLang - Bahasa Pemrograman Madura</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌴</text></svg>">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="logo">🌴</span>
+                <span class="brand-name">SakeraLang</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#playground">Playground</a></li>
+                <li><a href="#docs">Docs</a></li>
+                <li><a href="https://github.com/taufiqrrahmanidid/SakeraLang" target="_blank">GitHub</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1 class="hero-title">SakeraLang 🌴</h1>
+            <p class="hero-subtitle">Bahasa Pemrograman Berbasis Bahasa Madura</p>
+            <p class="hero-description">
+                Programming language yang menggunakan kata kunci bahasa Madura.<br>
+                Lengkap dengan variables, functions, loops, dan recursion!
+            </p>
+            <div class="hero-buttons">
+                <a href="#playground" class="btn btn-primary">Try Online</a>
+                <a href="https://github.com/taufiqrrahmanidid/SakeraLang" class="btn btn-secondary" target="_blank">
+                    <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                    </svg>
+                    GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">✨ Fitur Utama</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📦</div>
+                    <h3>Variables</h3>
+                    <p>Deklarasi variabel dengan <code>sango</code></p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔀</div>
+                    <h3>Conditionals</h3>
+                    <p>If-else dengan <code>mon</code> dan <code>laen</code></p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Loops</h3>
+                    <p>While (<code>selama</code>) dan For (<code>ulang</code>)</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Functions</h3>
+                    <p>Fungsi dengan <code>fungsi</code> dan <code>mareh</code></p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔢</div>
+                    <h3>Recursion</h3>
+                    <p>Dukungan penuh untuk rekursi</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💬</div>
+                    <h3>Comments</h3>
+                    <p>Komentar dengan <code>//</code></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Code Examples -->
+    <section class="examples">
+        <div class="container">
+            <h2 class="section-title">📝 Contoh Kode</h2>
+            <div class="example-tabs">
+                <button class="tab-btn active" data-tab="hello">Hello World</button>
+                <button class="tab-btn" data-tab="fibonacci">Fibonacci</button>
+                <button class="tab-btn" data-tab="function">Functions</button>
+            </div>
+            <div class="tab-content active" data-tab="hello">
+                <pre><code>// Hello World
+sango nama = "Madura"
+toles "Halo dari "
+toles nama</code></pre>
+            </div>
+            <div class="tab-content" data-tab="fibonacci">
+                <pre><code>// Fibonacci dengan rekursi
+fungsi fibonacci(n) {
+    mon n < 2 {
+        mareh n
+    }
+    laen {
+        sango a = fibonacci(n - 1)
+        sango b = fibonacci(n - 2)
+        mareh a + b
+    }
+}
+
+toles fibonacci(10)  // Output: 55</code></pre>
+            </div>
+            <div class="tab-content" data-tab="function">
+                <pre><code>// Functions
+fungsi tambah(a, b) {
+    mareh a + b
+}
+
+sango hasil = tambah(5, 3)
+toles hasil  // Output: 8</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- Playground -->
+    <section id="playground" class="playground">
+        <div class="container">
+            <h2 class="section-title">🎮 Online Playground</h2>
+            <p class="playground-note">Note: This is a client-side simulator. For full features, download and run locally.</p>
+            <div class="playground-container">
+                <div class="editor-panel">
+                    <h3>Code Editor</h3>
+                    <textarea id="code-editor" spellcheck="false">// Tulis kode SakeraLang di sini
+sango nama = "SakeraLang"
+toles "Halo dari "
+toles nama
+
+sango a = 10
+sango b = 5
+sango hasil = a + b
+toles hasil</textarea>
+                    <button id="run-btn" class="btn btn-primary">▶ Run Code</button>
+                </div>
+                <div class="output-panel">
+                    <h3>Output</h3>
+                    <pre id="output"></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documentation -->
+    <section id="docs" class="documentation">
+        <div class="container">
+            <h2 class="section-title">📚 Keywords</h2>
+            <table class="keywords-table">
+                <thead>
+                    <tr>
+                        <th>Keyword</th>
+                        <th>Arti</th>
+                        <th>Contoh</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>sango</code></td><td>variabel</td><td><code>sango x = 10</code></td></tr>
+                    <tr><td><code>toles</code></td><td>print</td><td><code>toles x</code></td></tr>
+                    <tr><td><code>mon</code></td><td>if</td><td><code>mon x > 5 { }</code></td></tr>
+                    <tr><td><code>laen</code></td><td>else</td><td><code>laen { }</code></td></tr>
+                    <tr><td><code>selama</code></td><td>while</td><td><code>selama i < 10 { }</code></td></tr>
+                    <tr><td><code>ulang</code></td><td>for</td><td><code>ulang ... { }</code></td></tr>
+                    <tr><td><code>fungsi</code></td><td>function</td><td><code>fungsi nama(x) { }</code></td></tr>
+                    <tr><td><code>mareh</code></td><td>return</td><td><code>mareh nilai</code></td></tr>
+                    <tr><td><code>bender</code></td><td>true</td><td><code>sango ok = bender</code></td></tr>
+                    <tr><td><code>sala</code></td><td>false</td><td><code>sango no = sala</code></td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>Made with ❤️ for Madura</p>
+            <p>
+                <a href="https://github.com/taufiqrrahmanidid/SakeraLang" target="_blank">GitHub</a> •
+                <a href="https://github.com/taufiqrrahmanidid/SakeraLang/blob/main/LICENSE" target="_blank">MIT License</a> •
+                <a href="https://github.com/taufiqrrahmanidid" target="_blank">@taufiqrrahmanidid</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
